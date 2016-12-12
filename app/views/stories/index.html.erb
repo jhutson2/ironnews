@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Iron News</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">new</a></li>
+        <li><a href="#">comments</a></li>
+        <li><a href="#">show</a></li>
+        <li><a href="#">ask</a></li>
+        <li><a href="#">jobs</a></li>
+        <li><a href="#">submit</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stories.each.with_index do |story, index|%>
+      <tr>
+        <td><%= index+1 %></td>
+        <td><%= story.title %></td>
+        <td><%= story.link %></td>
+        <td><%= story.email %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>
