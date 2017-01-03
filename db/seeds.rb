@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 stories = Story.create(
   [
-    { title:, link:, email: }
+    { title:"Aleppo", link:"http://www.independent.co.uk/topic/aleppo", email:"relief1@example.com" }
   ]
 )
