@@ -44,7 +44,7 @@
           <li><a href="#">submit</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><%= link_to 'Login with Github', auth_path(provider: 'github') %></li>
         </ul>
       </div>
     </div>

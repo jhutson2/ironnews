@@ -1,4 +1,4 @@
-ruby '2.3.1'
+ruby '2.3.3'
 source 'https://rubygems.org'
 
 
@@ -23,6 +23,9 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'dotenv-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
